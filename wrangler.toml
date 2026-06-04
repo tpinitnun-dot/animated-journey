@@ -1,8 +1,7 @@
 # ไฟล์ตั้งค่าโครงการสำหรับ Cloudflare (Wrangler Configuration)
 # ใช้สำหรับระบุชื่อโปรเจกต์ โฟลเดอร์ Static และการเชื่อมต่อฐานข้อมูล D1
 
-name = "tour-leader-companion"
-
+name = 'tiny-glade-06fc'
 # กำหนดโฟลเดอร์สำหรับเก็บไฟล์หน้าเว็บ Static (หน้าบ้าน)
 # สำหรับ Pages โฟลเดอร์หลักคือโฟลเดอร์ปัจจุบันที่เก็บ index.html
 pages_build_output_dir = "./"
