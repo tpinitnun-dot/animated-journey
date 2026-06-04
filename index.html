@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Tour Leader Companion - คู่มือหัวหน้าทัวร์ดิจิทัล</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="ระบบคู่มือดิจิทัลและเอกสารอ้างอิงออฟไลน์สำหรับหัวหน้าทัวร์ เพื่อการเดินทางที่ราบรื่นและเป็นมืออาชีพ">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0b0f19">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="TL Companion">
+  
+  <!-- Google Fonts: Inter & Noto Sans Thai -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Thai:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+
+  <div class="app-container">
+    
+    <!-- Fixed Header -->
+    <header class="app-header">
+      <div class="app-header-title">
+        <span>Loading...</span>
+        <h1>Tour Leader Guide</h1>
+      </div>
+      <div class="weather-badge" id="weather-indicator">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/><circle cx="12" cy="12" r="4"/></svg>
+        --°C
+      </div>
+    </header>
+
+    <!-- Scrollable Main Content -->
+    <main class="app-content">
+
+      <!-- VIEW 1: OVERVIEW PAGE (Active by default) -->
+      <section id="view-overview" class="app-view active">
+        <!-- Hero Section Banner -->
+        <div class="hero-gradient" id="overview-hero">
+          <!-- Populated by JavaScript -->
+        </div>
+        
+        <!-- Detailed content (Flights, Hotels, Pax) -->
+        <div id="overview-details">
+          <!-- Populated by JavaScript -->
+        </div>
+      </section>
+
+      <!-- VIEW 2: ITINERARY DAY-BY-DAY PAGE -->
+      <section id="view-itinerary" class="app-view">
+        <!-- Day Selector Tab Panel -->
+        <div class="day-selector-container">
+          <div class="day-selector" id="day-tabs">
+            <!-- Day tabs populated by JavaScript -->
+          </div>
+        </div>
+
+        <!-- Itinerary detailed content -->
+        <div id="itinerary-details">
+          <!-- Day itineraries populated by JavaScript -->
+        </div>
+      </section>
+
+      <!-- VIEW 3: VOUCHERS & BOOKINGS PAGE -->
+      <section id="view-vouchers" class="app-view">
+        <div class="section-title">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+          เอกสารอ้างอิงการจอง (Vouchers)
+        </div>
+        
+        <!-- Live Search Bar -->
+        <div class="search-container">
+          <span class="search-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          </span>
+          <input type="text" id="voucher-search" class="search-input" placeholder="ค้นหาตั๋วเครื่องบิน โรงแรม รหัสการจอง...">
+        </div>
+
+        <!-- List of Tickets -->
+        <div id="vouchers-list">
+          <!-- Populated by JavaScript -->
+        </div>
+      </section>
+
+      <!-- VIEW 4: CONTACT DIRECTORY PAGE -->
+      <section id="view-contacts" class="app-view">
+        <div class="section-title">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          รายชื่อติดต่อ & เบอร์ฉุกเฉิน
+        </div>
+
+        <!-- Live Search Bar -->
+        <div class="search-container">
+          <span class="search-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          </span>
+          <input type="text" id="contact-search" class="search-input" placeholder="ค้นหาชื่อ บทบาท หน้าที่ หรือพิกัดติดต่อ...">
+        </div>
+
+        <!-- Contact Directory Groups -->
+        <div id="contacts-list">
+          <!-- Populated by JavaScript -->
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Fixed Bottom Tab Bar Navigation -->
+    <nav class="app-nav">
+      <button class="nav-item active" data-view="overview">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+        </svg>
+        <span>คู่มือสรุป</span>
+      </button>
+      <button class="nav-item" data-view="itinerary">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+        <span>แผนรายวัน</span>
+      </button>
+      <button class="nav-item" data-view="vouchers">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+        </svg>
+        <span>เอกสารจอง</span>
+      </button>
+      <button class="nav-item" data-view="contacts">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+        </svg>
+        <span>เบอร์ติดต่อ</span>
+      </button>
+    </nav>
+
+    <!-- Overlay Details Modal -->
+    <div class="overlay-modal" id="overlay-modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 id="modal-title">Category</h3>
+          <button class="modal-close-btn" id="modal-close">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          </button>
+        </div>
+        <div class="modal-body" id="modal-body-content">
+          <!-- Filled by JavaScript -->
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Load Database and Application Scripts -->
+  <script src="src/js/data.js"></script>
+  <script src="src/js/app.js"></script>
+  
+  <!-- Offline Service Worker Registration Script -->
+  <script>
+    if ('serviceWorker' in navigator && window.location.protocol !== 'file:') {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js')
+          .then(reg => console.log('Service Worker Registered successfully', reg.scope))
+          .catch(err => console.log('Service Worker Registration failed: ', err));
+      });
+    }
+  </script>
+</body>
+</html>

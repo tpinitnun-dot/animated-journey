@@ -1,0 +1,14 @@
+# ไฟล์ตั้งค่าโครงการสำหรับ Cloudflare (Wrangler Configuration)
+# ใช้สำหรับระบุชื่อโปรเจกต์ โฟลเดอร์ Static และการเชื่อมต่อฐานข้อมูล D1
+
+name = "tour-leader-companion"
+
+# กำหนดโฟลเดอร์สำหรับเก็บไฟล์หน้าเว็บ Static (หน้าบ้าน)
+# สำหรับ Pages โฟลเดอร์หลักคือโฟลเดอร์ปัจจุบันที่เก็บ index.html
+pages_build_output_dir = "./"
+
+# ตั้งค่าการเชื่อมต่อฐานข้อมูล Cloudflare D1
+[[d1_databases]]
+binding = "DB"                                   # ชื่อของตัวแปรที่เราเรียกใช้ในโค้ด (เช่น context.env.DB)
+database_name = "tour_db"                        # ชื่อฐานข้อมูลที่สร้างขึ้นบนระบบ Cloudflare Dashboard
+# database_id = "ใส่ไอดีฐานข้อมูลที่นี่หากรันผ่าน CLI" # Cloudflare จะระบุให้อัตโนมัติเมื่อกดผูกมัดผ่านหน้าเว็บ
