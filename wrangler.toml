@@ -13,5 +13,5 @@ binding = "DB"                                   # ชื่อของตั�
 database_name = "tour_db"                        # ชื่อฐานข้อมูลที่สร้างขึ้นบนระบบ Cloudflare Dashboard
 # database_id = "ใส่ไอดีฐานข้อมูลที่นี่หากรันผ่าน CLI" # Cloudflare จะระบุให้อัตโนมัติเมื่อกดผูกมัดผ่านหน้าเว็บ
 name = "animated-journey"
-compatibility_date = "2026-06-05"
+compatibility_date = "2026-06-04"
 main = "src/index.ts"
