@@ -12,5 +12,5 @@ pages_build_output_dir = "./"
 binding = "DB"                                   # ชื่อของตัวแปรที่เราเรียกใช้ในโค้ด (เช่น context.env.DB)
 database_name = "tour_db"                        # ชื่อฐานข้อมูลที่สร้างขึ้นบนระบบ Cloudflare Dashboard
 # database_id = "ใส่ไอดีฐานข้อมูลที่นี่หากรันผ่าน CLI" # Cloudflare จะระบุให้อัตโนมัติเมื่อกดผูกมัดผ่านหน้าเว็บ
-compatibility_date = "2026-06-05"
+compatibility_date = "2026-06-04"
 main = "src/index.ts"
